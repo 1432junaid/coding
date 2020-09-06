@@ -5,6 +5,8 @@ using namespace std;
 
 uint32_t bit_reverse(uint32_t num){
 	if(num == 0)return num;
+	bitset<32>bits(num);
+	cout  <<  bits << endl;
 	uint32_t x = 0;
 	for(int i =0; i<32; i++){
 		x = x<<1;
@@ -12,6 +14,9 @@ uint32_t bit_reverse(uint32_t num){
 		x = temp|x;
 		num = num >> 1;
 	}
+	bits = x;
+	cout << bits << endl;
+//	cout << x << endl;
 	return x;
 }
 
